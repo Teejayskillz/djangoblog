@@ -1,0 +1,47 @@
+/* Color Scheme */
+:root {
+    --justnaija-red: #e63946;
+    --justnaija-dark: #1d3557;
+}
+
+/* Typography */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Post Cards */
+.post-card {
+    transition: transform 0.3s;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.post-card:hover {
+    transform: translateY(-5px);
+}
+.post-card img {
+    height: 200px;
+    object-fit: cover;
+}
+.post-card .category-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--justnaija-red);
+}
+
+/* Trending Section */
+.trending-badge {
+    background: var(--justnaija-dark);
+    color: white;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+}
+
+a {
+    text-decoration: none;
+  }
+
+  

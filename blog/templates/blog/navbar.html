@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <h1 class="text-danger fw-bold">Just<span class="text-dark">Naija</span></h1>
+        </a>
+        
+        <!-- Categories -->
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link fw-bold" href="{% url 'category_post' 'music' %}">Music</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link fw-bold" href="{% url 'category_post' 'movies' %}">Movies</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link fw-bold" href="{% url 'category_post' 'celebrity' %}">Celebrity</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link fw-bold" href="{% url 'category_post' 'news' %}">News</a>
+                </li>
+            </ul>
+            
+            <!-- Search -->
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search...">
+                <button class="btn btn-outline-danger" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</nav>

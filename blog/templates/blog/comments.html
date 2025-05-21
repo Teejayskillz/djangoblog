@@ -1,0 +1,29 @@
+<!-- blog/templates/blog/comments.html -->
+<div class="comments-section mt-5">
+    <h4>Comments ({{ comments.count }})</h4>
+    
+    {% for comment in comments %}
+    <div class="card my-3">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">
+                {{ comment.author_name }}
+                <small class="text-muted float-end">{{ comment.created_at|timesince }} ago</small>
+            </h6>
+            <p class="card-text">{{ comment.text }}</p>
+        </div>
+    </div>
+    {% empty %}
+    <p class="text-muted">No comments yet. Be the first!</p>
+    {% endfor %}
+
+    <form method="post" action="{% url 'add_comment' post.slug %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" name="author_name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+            <textarea name="text" class="form-control" rows="3" placeholder="Your Comment" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-danger">Post Comment</button>
+    </form>
+</div>
