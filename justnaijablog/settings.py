@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vm$tar^fgowr8bb60ub5q3##9_c5nfi7$&7!abmw65m$rro!!&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sleekpedia.com.ng', 'www.sleekpedia.com.ng']
 
 
 # Application definition
